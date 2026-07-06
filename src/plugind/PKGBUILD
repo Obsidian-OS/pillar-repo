@@ -1,5 +1,5 @@
 pkgname=plugind
-pkgver=r2.28b008c
+pkgver=r6.c60b285
 pkgrel=1
 pkgdesc="ObsidianOS Plugin Daemon - A daemon that manages and triggers plugins on various events."
 arch=('any')

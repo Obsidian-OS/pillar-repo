@@ -1,7 +1,7 @@
 repo.db*
 repo.files*
 src/
-src/*
+src/*/
 src/*/PKGBUILD
 *.pkg.tar.zst
 README.md
