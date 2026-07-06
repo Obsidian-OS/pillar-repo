@@ -1,0 +1,7 @@
+*
+!*.sh
+!src
+!src/*
+!src/*/PKGBUILD
+!.gitignore
+!.sftpinclude

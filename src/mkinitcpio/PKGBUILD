@@ -1,0 +1,28 @@
+pkgname=mkinitcpio #-pillar
+pkgver=39.1
+pkgrel=1
+pkgdesc='[project pillar] Modular initramfs image creation utility'
+arch=('any')
+url='https://github.com/Obsidian-OS/pillar-mkinitcpio'
+license=('GPL-2.0-only')
+depends=('awk' 'mkinitcpio-busybox' 'kmod' 'util-linux' 'libarchive' 'coreutils'
+         'bash' 'binutils' 'diffutils' 'findutils' 'grep' 'gzip' 'filesystem' 'zstd' 'systemd')
+optdepends=('xz: Use lzma or xz compression for the initramfs image'
+            'bzip2: Use bzip2 compression for the initramfs image'
+            'lzop: Use lzo compression for the initramfs image'
+            'lz4: Use lz4 compression for the initramfs image'
+            'mkinitcpio-nfs-utils: Support for root filesystem on NFS')
+makedepends=('git' 'asciidoctor' 'meson')
+checkdepends=('bats' 'bats-assert' 'bzip2' 'lz4' 'lzop')
+provides=('initramfs' "mkinitcpio=${pkgver}")
+conflicts=('mkinitcpio')
+backup=('etc/mkinitcpio.conf')
+source=('git+https://github.com/Obsidian-OS/pillar-mkinitcpio.git')
+sha256sums=('SKIP')
+build() {
+	meson setup --prefix=/usr --buildtype=plain pillar-mkinitcpio build
+}
+
+package() {
+	meson install -C build --destdir "$pkgdir"
+}
