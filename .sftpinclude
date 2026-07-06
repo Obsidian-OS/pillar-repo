@@ -4,3 +4,6 @@ src/
 src/*
 src/*/PKGBUILD
 *.pkg.tar.zst
+README.md
+build.sh
+push.sh
