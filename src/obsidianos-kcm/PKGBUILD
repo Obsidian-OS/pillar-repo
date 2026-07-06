@@ -9,10 +9,8 @@ depends=(
   'qt6-base'
   'qt6-declarative'
   'kirigami'
-  'obsidianctl'
   'polkit'
   'systemsettings'
-  'obsidianos-branding'
 )
 makedepends=(
   'cmake'
