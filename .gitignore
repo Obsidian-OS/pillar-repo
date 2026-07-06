@@ -5,3 +5,4 @@
 !src/*/PKGBUILD
 !.gitignore
 !.sftpinclude
+!README.md
