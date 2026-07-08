@@ -1,5 +1,5 @@
 pkgname=obsidianctl
-pkgver=r127.628df93
+pkgver=r129.d5e6206
 pkgrel=1
 pkgdesc="ObsidianOS's special program to manage A/B Partitions"
 arch=('any')
